@@ -4,9 +4,7 @@ import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { isTeacher } from "@/lib/teacher";
 
-export async function POST(
-  req: Request,
-) {
+export async function POST(req: Request) {
   try {
     const { userId } = auth();
     const { title } = await req.json();
@@ -19,10 +17,10 @@ export async function POST(
       data: {
         userId,
         title,
-      }
+      },
     });
 
-    return NextResponse.json(course);
+    return NextResponse.json(course, { status: 201 });
   } catch (error) {
     console.log("[COURSES]", error);
     return new NextResponse("Internal Error", { status: 500 });
