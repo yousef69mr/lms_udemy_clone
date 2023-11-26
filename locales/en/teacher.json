@@ -1,0 +1,34 @@
+{
+  "courses-table": {
+    "labels": {
+      "title": "title",
+      "price": "price",
+      "isPublished": "publishing status"
+    },
+    "actions": {
+      "add": "add {{instance}}",
+      "edit": "edit {{instance}}",
+      "open": "open {{instance}}",
+      "filter": "filter {{instance}}"
+    }
+  },
+  "info-cards": {
+    "labels": {
+      "TotalSales": "Total Sales",
+      "TotalRevenue": "Total Revenue"
+    }
+  },
+  "createCourseForm": {
+    "headerText": "Name your course",
+    "headerSubTitle": "What would you like to name your course? Don't worry, you can change this later.",
+    "titleText": "Course Title",
+    "inputs-placeholder": {
+      "title": "e.g. 'Advanced web development'"
+    },
+    "helper-texts": {
+      "title": "What will you teach in this course?"
+    },
+    "submit": "create",
+    "loading": "creating..."
+  }
+}

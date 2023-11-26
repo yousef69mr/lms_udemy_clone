@@ -1,0 +1,65 @@
+{
+  "banners": {
+    "unPublishedStatus": "This chapter is unpublished. It will not be visible in the course"
+  },
+  "sections": {
+    "labels": {
+      "backButton": "Back to course setup",
+      "headerTitle": "Chapter creation",
+      "headerSubtitle": "Complete all fields",
+      "main-data": "Customize your chapter",
+      "settings": "Access Settings",
+      "video": "Add a video"
+    }
+  },
+
+  "titleForm": {
+    "titleText": "Chapter Title",
+    "title": "title",
+    "inputs-placeholder": {
+      "title": "e.g. 'Introduction to the course'"
+    },
+    "submit": "save",
+    "loading": "saving..."
+  },
+  "descriptionForm": {
+    "titleText": "Chapter Description",
+    "title": "description",
+    "inputs-placeholder": {
+      "description": "e.g. 'This chapter is about...'"
+    },
+    "inputs-default": {
+      "description": "No description"
+    },
+    "submit": "save",
+    "loading": "saving..."
+  },
+  "settingsForm": {
+    "titleText": "Chapter Access",
+    "title": "access",
+    "inputs-placeholder": {
+      "visablity-toggle": "Check this box if you want to make this chapter free for preview"
+    },
+    "inputs-default": {
+      "free": "This chapter is free for preview.",
+      "paid": "This chapter is not free."
+    },
+    "submit": "save",
+    "loading": "saving..."
+  },
+  "videoForm": {
+    "titleText": "Chapter Video",
+    "title": "video",
+    "inputs-default": {
+      "video": "No video"
+    },
+    "inputs-placeholder": {
+      "video": "Upload this chapter's video"
+    },
+    "helper-texts": {
+      "delay-error": "Videos can take a few minutes to process. Refresh the page if video does not appear."
+    },
+    "submit": "save",
+    "loading": "saving..."
+  }
+}

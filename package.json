@@ -1,6 +1,6 @@
 {
   "name": "lms-tutorial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,7 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.23.5",
+    "@clerk/nextjs": "^4.27.1",
     "@hello-pangea/dnd": "^16.3.0",
     "@hookform/resolvers": "^3.3.1",
     "@mux/mux-node": "^7.3.1",
@@ -25,6 +25,7 @@
     "@radix-ui/react-progress": "^1.0.3",
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tooltip": "^1.0.7",
     "@tanstack/react-table": "^8.9.11",
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",
@@ -37,8 +38,12 @@
     "cmdk": "^0.2.0",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.12",
+    "i18next": "^23.7.6",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "i18next-resources-to-backend": "^1.2.0",
     "lucide-react": "^0.276.0",
-    "next": "13.4.12",
+    "next": "^14.0.2",
+    "next-i18n-router": "^5.0.1",
     "postcss": "8.4.29",
     "query-string": "^8.1.0",
     "react": "18.2.0",
@@ -47,6 +52,7 @@
     "react-dropzone": "^14.2.3",
     "react-hook-form": "^7.46.1",
     "react-hot-toast": "^2.4.1",
+    "react-i18next": "^13.4.1",
     "react-icons": "^4.11.0",
     "react-quill": "^2.0.0",
     "recharts": "^2.8.0",

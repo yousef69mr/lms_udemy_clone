@@ -1,0 +1,101 @@
+{
+  "banners": {
+    "unPublishedStatus": ".هذا الكورس غير منشور، و لن يكون مرئيا للطلاب"
+  },
+  "sections": {
+    "labels": {
+      "headerTitle": "إعدادات الكورس",
+      "headerSubtitle": "أكمل جميع البيانات اللازمة",
+      "main-data": "تخصيص بيانات الكورس",
+      "chapters": "فصول الكورس",
+      "price": "قم ببيع كورسك",
+      "attachments": "الموارد والمرفقات"
+    }
+  },
+  "titleForm": {
+    "titleText": "اسم الكورس",
+    "title": "اسم",
+    "inputs-placeholder": {
+      "title": "'Advanced web development' : مثال "
+    },
+
+    "submit": "حفظ",
+    "loading": "... جارى الحفظ"
+  },
+  "priceForm": {
+    "titleText": "سعر الكورس",
+    "title": "السعر",
+    "inputs-placeholder": {
+      "price": "أدخل السعر"
+    },
+    "inputs-default": {
+      "price": "لا يوجد سعر"
+    },
+    "submit": "حفظ",
+    "loading": "... جارى الحفظ"
+  },
+  "descriptionForm": {
+    "titleText": "شرح للكورس",
+    "title": "شرح",
+    "inputs-placeholder": {
+      "description": "'... مثال : 'هذا الكورس عن"
+    },
+    "inputs-default": {
+      "description": "لا يوجد شرح"
+    },
+    "submit": "حفظ",
+    "loading": "... جارى الحفظ"
+  },
+  "categoryForm": {
+    "titleText": "تصنيف الكورس",
+    "title": "التصنيف",
+
+    "inputs-default": {
+      "category": "لا يوجد تصنيف"
+    },
+    "submit": "حفظ",
+    "loading": "... جارى الحفظ"
+  },
+  "attachmentsForm": {
+    "titleText": "مرفقات الكورس",
+    "title": "مرفقات",
+    "inputs-default": {
+      "attachments": "لا يوجد مرفقات"
+    },
+    "helper-texts": {
+      "mainText": ".أضف أي شيء قد يحتاجه طلابك لإكمال الكورس"
+    },
+    "submit": "حفظ",
+    "loading": "... جارى الحفظ"
+  },
+  "chaptersForm": {
+    "titleText": "فصول الكورس",
+    "title": "فصل",
+    "inputs-placeholder": {
+      "title": "'... مثال : 'مقدمة عن الكورس"
+    },
+    "inputs-default": {
+      "chapters": "لا يوجد فصول حاليا"
+    },
+    "helper-texts": {
+      "reorder": "السحب والإفلات لإعادة ترتيب الفصول "
+    },
+    "submit": "إنشاء",
+    "loading": "... جارى الإنشاء"
+  },
+  "imageForm": {
+    "titleText": "صورة الكورس",
+    "title": "صورة",
+    "inputs-placeholder": {
+      "image": "Set a price for your course"
+    },
+    "inputs-default": {
+      "image": "لا يوجد صورة"
+    },
+    "helper-texts": {
+      "dimensions": "يوصى بنسبة عرض إلى ارتفاع تبلغ 16:9"
+    },
+    "submit": "حفظ",
+    "loading": "... جارى الحفظ"
+  }
+}

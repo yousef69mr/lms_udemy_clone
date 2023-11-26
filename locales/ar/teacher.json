@@ -1,0 +1,34 @@
+{
+  "courses-table": {
+    "labels": {
+      "title": "اسم",
+      "price": "سعر",
+      "isPublished": "حالة المنشور"
+    },
+    "actions": {
+      "add": "إضافة {{instance}}",
+      "edit": "{{instance}} تعديل",
+      "open": "فتح {{instance}}",
+      "filter": "تنقية {{instance}}"
+    }
+  },
+  "info-cards": {
+    "labels": {
+      "TotalSales": "إجمالى المبيعات",
+      "TotalRevenue": "إجمالى الأرباح"
+    }
+  },
+  "createCourseForm": {
+    "headerText": "قم بتسمية كورسك",
+    "headerSubTitle": ".ماذا تريد تسمية كورسك؟ لا تقلق ، يمكنك تغيير هذا لاحقا",
+    "titleText": "اسم الكورس",
+    "inputs-placeholder": {
+      "title": "'Advanced web development' : مثال "
+    },
+    "helper-texts": {
+      "title": "ماذا ستدرس في هذا الكورس؟"
+    },
+    "submit": "إنشاء",
+    "loading": "... جارى الإنشاء"
+  }
+}

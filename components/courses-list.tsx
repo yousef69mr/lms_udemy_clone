@@ -1,6 +1,11 @@
 import { Category, Course } from "@prisma/client";
 
 import { CourseCard } from "@/components/course-card";
+import { useServerTranslation } from "@/lib/i18n";
+import { Locale } from "@/next-i18next.config";
+
+
+import { mainNamespaces } from "@/app/(main)/layout";
 
 type CourseWithProgressWithCategory = Course & {
   category: Category | null;
@@ -10,11 +15,11 @@ type CourseWithProgressWithCategory = Course & {
 
 interface CoursesListProps {
   items: CourseWithProgressWithCategory[];
+  locale: Locale;
 }
 
-export const CoursesList = ({
-  items
-}: CoursesListProps) => {
+export const CoursesList = async ({ items, locale }: CoursesListProps) => {
+  const { t } = await useServerTranslation(locale, mainNamespaces);
   return (
     <div>
       <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
@@ -32,10 +37,10 @@ export const CoursesList = ({
         ))}
       </div>
       {items.length === 0 && (
-        <div className="text-center text-sm text-muted-foreground mt-10">
-          No courses found
+        <div className="text-center text-sm text-muted-foreground capitalize mt-10">
+          {t("notFound", { instance: t("course.plural") })}
         </div>
       )}
     </div>
-  )
-}
+  );
+};

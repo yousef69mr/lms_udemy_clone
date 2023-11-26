@@ -1,0 +1,65 @@
+{
+  "banners": {
+    "unPublishedStatus": "هذا الفصل غير منشور، و لن يكون مرئيا في الكورس"
+  },
+  "sections": {
+    "labels": {
+      "backButton": "الرجوع لإعدادات الكورس",
+      "headerTitle": "إعدادات الفصل",
+      "headerSubtitle": "أكمل جميع البيانات اللازمة",
+      "main-data": "تخصيص بيانات الفصل",
+      "settings": "إعدادات الوصول",
+      "video": "قم بإضافة فيديو"
+    }
+  },
+  "titleForm": {
+    "titleText": "اسم الفصل",
+    "title": "اسم",
+    "inputs-placeholder": {
+      "title": "'مثال : 'مقدمة الكورس"
+    },
+
+    "submit": "حفظ",
+    "loading": "... جارى الحفظ"
+  },
+  "descriptionForm": {
+    "titleText": "شرح للفصل",
+    "title": "شرح",
+    "inputs-placeholder": {
+      "description": "'... مثال : 'هذا الفصل يتحدث عن"
+    },
+    "inputs-default": {
+      "description": "لا يوجد شرح"
+    },
+    "submit": "حفظ",
+    "loading": "... جارى الحفظ"
+  },
+  "settingsForm": {
+    "titleText": "إمكانيه الوصول للفصل",
+    "title": "إمكانيه الوصول",
+    "inputs-placeholder": {
+      "visablity-toggle": "حدد هذا المربع إذا كنت تريد جعل هذا الفصل مجانيا للمعاينة"
+    },
+    "inputs-default": {
+      "free": ".هذا الفصل مجاني للمعاينة",
+      "paid": ".هذا الفصل ليس مجانيا"
+    },
+    "submit": "حفظ",
+    "loading": "... جارى الحفظ"
+  },
+  "videoForm": {
+    "titleText": "فيديو للفصل",
+    "title": "فيديو",
+    "inputs-placeholder": {
+      "video": " قم بتحميل فيديو هذا الفصل"
+    },
+    "inputs-default": {
+      "video": "لا يوجد فيديو"
+    },
+    "helper-texts": {
+      "delay-error": ".قد تستغرق معالجة مقاطع الفيديو بضع دقائق. قم بتحديث الصفحة إذا لم يظهر الفيديو"
+    },
+    "submit": "حفظ",
+    "loading": "... جارى الحفظ"
+  }
+}

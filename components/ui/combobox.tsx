@@ -1,35 +1,35 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Check, ChevronsUpDown } from "lucide-react"
+import { useState } from "react";
+import { Check, ChevronsUpDown } from "lucide-react";
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "@/components/ui/command"
+} from "@/components/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@/components/ui/popover";
+import { useTranslation } from "react-i18next";
 
 interface ComboboxProps {
   options: { label: string; value: string }[];
   value?: string;
   onChange: (value: string) => void;
-};
+}
 
-export const Combobox = ({
-  options,
-  value,
-  onChange
-}: ComboboxProps) => {
-  const [open, setOpen] = React.useState(false)
+export const Combobox = ({ options, value, onChange }: ComboboxProps) => {
+  const [open, setOpen] = useState(false);
+
+  const { t } = useTranslation();
+  const constantsI18n = useTranslation('constants');
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -42,21 +42,25 @@ export const Combobox = ({
         >
           {value
             ? options.find((option) => option.value === value)?.label
-            : "Select option..."}
+            : constantsI18n.t("actions.select", { instance: t("category.single") })}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-full p-0">
         <Command>
-          <CommandInput placeholder="Search option..." />
-          <CommandEmpty>No option found.</CommandEmpty>
+          <CommandInput
+            placeholder={constantsI18n.t("actions.search", { instance: t("category.single") })}
+          />
+          <CommandEmpty>
+            {t("notFound", { instance: t("option.single") })}
+          </CommandEmpty>
           <CommandGroup>
             {options.map((option) => (
               <CommandItem
                 key={option.value}
                 onSelect={() => {
-                  onChange(option.value === value ? "" : option.value)
-                  setOpen(false)
+                  onChange(option.value === value ? "" : option.value);
+                  setOpen(false);
                 }}
               >
                 <Check
@@ -72,5 +76,5 @@ export const Combobox = ({
         </Command>
       </PopoverContent>
     </Popover>
-  )
-}
+  );
+};

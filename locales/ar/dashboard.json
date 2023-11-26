@@ -1,0 +1,8 @@
+{
+  "info-cards": {
+    "labels": {
+      "InProgress": "قيد التنفيذ",
+      "Completed": "مكتملة"
+    }
+  }
+}

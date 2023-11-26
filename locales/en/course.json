@@ -1,0 +1,104 @@
+{
+  "banners": {
+    "unPublishedStatus": "This course is unpublished. It will not be visible to the students."
+  },
+  "sections": {
+    "labels": {
+      "headerTitle": "Course setup",
+      "headerSubtitle": "Complete all fields",
+      "main-data": "Customize your course",
+      "chapters": "Course chapters",
+      "price": "Sell your course",
+      "attachments": "Resources & Attachments"
+    }
+  },
+
+  "titleForm": {
+    "titleText": "Course Title",
+    "title": "title",
+    "inputs-placeholder": {
+      "title": "e.g. 'Advanced web development'"
+    },
+    "submit": "save",
+    "loading": "saving..."
+  },
+  "priceForm": {
+    "titleText": "Course Price",
+    "title": "price",
+    "inputs-placeholder": {
+      "price": "Set a price for your course"
+    },
+    "inputs-default": {
+      "price": "No price"
+    },
+    "submit": "save",
+    "loading": "saving..."
+  },
+  "descriptionForm": {
+    "titleText": "Course Description",
+    "title": "description",
+    "inputs-placeholder": {
+      "description": "e.g. 'This course is about...'"
+    },
+    "inputs-default": {
+      "description": "No description"
+    },
+    "submit": "save",
+    "loading": "saving..."
+  },
+  "categoryForm": {
+    "titleText": "Course Category",
+    "title": "category",
+
+    "inputs-default": {
+      "category": "No category"
+    },
+    "submit": "save",
+    "loading": "saving..."
+  },
+  "attachmentsForm": {
+    "titleText": "Course Attachments",
+    "title": "attachments",
+    "inputs-placeholder": {
+      "attachments": "Set a price for your course"
+    },
+    "inputs-default": {
+      "attachments": "No attachments"
+    },
+    "helper-texts": {
+      "mainText": "Add anything your students might need to complete the course."
+    },
+    "submit": "save",
+    "loading": "saving..."
+  },
+  "chaptersForm": {
+    "titleText": "Course Chapters",
+    "title": "chapter",
+    "inputs-placeholder": {
+      "title": "e.g. 'Introduction to the course'"
+    },
+    "inputs-default": {
+      "chapters": "No chapters yet"
+    },
+    "helper-texts": {
+      "reorder": "Drag and drop to reorder the chapters"
+    },
+    "submit": "create",
+    "loading": "creating..."
+  },
+  "imageForm": {
+    "titleText": "Course image",
+    "title": "image",
+    "inputs-placeholder": {
+      "image": "Set a price for your course"
+    },
+    "inputs-default": {
+      "image": "No image"
+    },
+    "helper-texts": {
+      "dimensions": "16:9 aspect ratio recommended"
+    },
+    "submit": "save",
+    "loading": "saving..."
+  }
+}
