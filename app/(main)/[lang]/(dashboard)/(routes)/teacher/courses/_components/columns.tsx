@@ -17,13 +17,13 @@ import { cn } from "@/lib/utils";
 import { useParams } from "next/navigation";
 import { useTranslation } from "react-i18next";
 
-const useCourseTranslations = (namespace: string = "") => {
+const CourseTranslations = (namespace: string = "") => {
   const i18n = useTranslation(namespace);
   return i18n;
 };
 
 // Custom hook for getting params
-const useCourseParams = () => {
+const CourseParams = () => {
   return useParams();
 };
 
@@ -31,7 +31,7 @@ export const columns: ColumnDef<Course>[] = [
   {
     accessorKey: "title",
     header: ({ column }) => {
-      const {t} = useCourseTranslations();
+      const {t} = CourseTranslations();
       return (
         <Button
           variant="ghost"
@@ -47,7 +47,7 @@ export const columns: ColumnDef<Course>[] = [
   {
     accessorKey: "price",
     header: ({ column }) => {
-      const { t } = useCourseTranslations();
+      const { t } = CourseTranslations();
       return (
         <Button
           variant="ghost"
@@ -72,7 +72,7 @@ export const columns: ColumnDef<Course>[] = [
   {
     accessorKey: "isPublished",
     header: ({ column }) => {
-      const { t } = useCourseTranslations();
+      const { t } = CourseTranslations();
       return (
         <Button
           variant="ghost"
@@ -87,7 +87,7 @@ export const columns: ColumnDef<Course>[] = [
     cell: ({ row }) => {
       const isPublished = row.getValue("isPublished") || false;
 
-      const { t } = useCourseTranslations("constants");
+      const { t } = CourseTranslations("constants");
       return (
         <Badge className={cn("bg-slate-500", isPublished && "bg-sky-700")}>
           {isPublished ? t("status.published") : t("status.draft")}
@@ -100,8 +100,8 @@ export const columns: ColumnDef<Course>[] = [
     cell: ({ row }) => {
       const { id } = row.original;
 
-      const { lang: locale } = useCourseParams();
-      const { t } = useCourseTranslations();
+      const { lang: locale } = CourseParams();
+      const { t } = CourseTranslations();
 
       return (
         <DropdownMenu>
