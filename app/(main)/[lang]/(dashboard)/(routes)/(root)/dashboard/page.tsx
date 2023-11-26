@@ -14,7 +14,7 @@ interface Props {
   params: { lang: Locale };
 }
 
-export const dashboardNamespaces = ["dashboard"];
+const dashboardNamespaces = ["dashboard"];
 
 export default async function Dashboard(props: Props) {
   const {

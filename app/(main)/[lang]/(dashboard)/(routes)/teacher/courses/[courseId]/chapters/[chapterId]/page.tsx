@@ -24,7 +24,7 @@ import TranslationsProvider from "@/components/providers/translation-provider";
 import { dir } from "i18next";
 import { cn } from "@/lib/utils";
 
-export const charpterNamespaces = ["chapter"];
+ const charpterNamespaces = ["chapter"];
 
 const ChapterIdPage = async ({
   params,

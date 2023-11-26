@@ -25,7 +25,7 @@ import TranslationsProvider from "@/components/providers/translation-provider";
 import { dir } from "i18next";
 import { cn } from "@/lib/utils";
 
-export const courseNamespaces = ["course"];
+ const courseNamespaces = ["course"];
 
 const CourseIdPage = async ({
   params,

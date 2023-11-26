@@ -4,7 +4,7 @@ import { Locale } from "@/next-i18next.config";
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
-export const teacherNamespaces = ["teacher"];
+const teacherNamespaces = ["teacher"];
 
 const TeacherLayout = ({
   children,

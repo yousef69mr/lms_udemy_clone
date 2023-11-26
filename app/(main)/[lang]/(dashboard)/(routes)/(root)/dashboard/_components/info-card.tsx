@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { dir } from "i18next";
 import { ServerTranslation } from "@/lib/i18n";
 
-import { mainNamespaces } from "@/app/(main)/layout";
+// import { mainNamespaces } from "@/app/(main)/layout";
 
 interface InfoCardProps {
   numberOfItems: number;
@@ -25,7 +25,7 @@ export const InfoCard = async ({
   type,
   locale,
 }: InfoCardProps) => {
-  const { t } = await ServerTranslation(locale, mainNamespaces);
+  const { t } = await ServerTranslation(locale, ["common"]);
   return (
     <div
       className={cn(
