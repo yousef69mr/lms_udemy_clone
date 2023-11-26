@@ -17,11 +17,21 @@ import { cn } from "@/lib/utils";
 import { useParams } from "next/navigation";
 import { useTranslation } from "react-i18next";
 
+const useCourseTranslations = (namespace: string = "") => {
+  const i18n = useTranslation(namespace);
+  return i18n;
+};
+
+// Custom hook for getting params
+const useCourseParams = () => {
+  return useParams();
+};
+
 export const columns: ColumnDef<Course>[] = [
   {
     accessorKey: "title",
     header: ({ column }) => {
-      const { t } = useTranslation();
+      const {t} = useCourseTranslations();
       return (
         <Button
           variant="ghost"
@@ -37,7 +47,7 @@ export const columns: ColumnDef<Course>[] = [
   {
     accessorKey: "price",
     header: ({ column }) => {
-      const { t } = useTranslation();
+      const { t } = useCourseTranslations();
       return (
         <Button
           variant="ghost"
@@ -62,7 +72,7 @@ export const columns: ColumnDef<Course>[] = [
   {
     accessorKey: "isPublished",
     header: ({ column }) => {
-      const { t } = useTranslation();
+      const { t } = useCourseTranslations();
       return (
         <Button
           variant="ghost"
@@ -77,12 +87,10 @@ export const columns: ColumnDef<Course>[] = [
     cell: ({ row }) => {
       const isPublished = row.getValue("isPublished") || false;
 
-      const { t } = useTranslation("constants");
+      const { t } = useCourseTranslations("constants");
       return (
         <Badge className={cn("bg-slate-500", isPublished && "bg-sky-700")}>
-          {isPublished
-            ? t("status.published")
-            : t("status.draft")}
+          {isPublished ? t("status.published") : t("status.draft")}
         </Badge>
       );
     },
@@ -92,14 +100,18 @@ export const columns: ColumnDef<Course>[] = [
     cell: ({ row }) => {
       const { id } = row.original;
 
-      const { lang: locale } = useParams();
-      const { t } = useTranslation();
+      const { lang: locale } = useCourseParams();
+      const { t } = useCourseTranslations();
 
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="h-4 w-8 p-0">
-              <span className="sr-only">{t("courses-table.actions.open", { instance: t('menu.single') })}</span>
+              <span className="sr-only">
+                {t("courses-table.actions.open", {
+                  instance: t("menu.single"),
+                })}
+              </span>
               <MoreHorizontal className="h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
