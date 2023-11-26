@@ -6,7 +6,7 @@ import { getAnalytics } from "@/actions/get-analytics";
 import { DataCard } from "./_components/data-card";
 import { Chart } from "./_components/chart";
 import { Locale } from "@/next-i18next.config";
-import { useServerTranslation } from "@/lib/i18n";
+import { ServerTranslation } from "@/lib/i18n";
 import { teacherNamespaces } from "../layout";
 
 interface Props {
@@ -22,7 +22,7 @@ const AnalyticsPage = async ({ params }: Props) => {
     return redirect("/");
   }
 
-  const { t } = await useServerTranslation(params.lang, teacherNamespaces);
+  const { t } = await ServerTranslation(params.lang, teacherNamespaces);
 
   const { data, totalRevenue, totalSales } = await getAnalytics(userId);
 

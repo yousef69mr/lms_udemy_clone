@@ -8,7 +8,7 @@ import { CoursesList } from "@/components/courses-list";
 import { InfoCard } from "./_components/info-card";
 import TranslationsProvider from "@/components/providers/translation-provider";
 import { Locale } from "@/next-i18next.config";
-import { useServerTranslation } from "@/lib/i18n";
+import { ServerTranslation } from "@/lib/i18n";
 
 interface Props {
   params: { lang: Locale };
@@ -21,7 +21,7 @@ export default async function Dashboard(props: Props) {
     params: { lang },
   } = props;
 
-  const { t } = await useServerTranslation(lang, dashboardNamespaces);
+  const { t } = await ServerTranslation(lang, dashboardNamespaces);
 
   const { userId } = auth();
 

@@ -4,7 +4,7 @@ import { IconBadge } from "@/components/icon-badge";
 import { Locale } from "@/next-i18next.config";
 import { cn } from "@/lib/utils";
 import { dir } from "i18next";
-import { useServerTranslation } from "@/lib/i18n";
+import { ServerTranslation } from "@/lib/i18n";
 
 import { mainNamespaces } from "@/app/(main)/layout";
 
@@ -25,7 +25,7 @@ export const InfoCard = async ({
   type,
   locale,
 }: InfoCardProps) => {
-  const { t } = await useServerTranslation(locale, mainNamespaces);
+  const { t } = await ServerTranslation(locale, mainNamespaces);
   return (
     <div
       className={cn(
