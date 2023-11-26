@@ -19,7 +19,7 @@ import { ChapterAccessForm } from "./_components/chapter-access-form";
 import { ChapterVideoForm } from "./_components/chapter-video-form";
 import { ChapterActions } from "./_components/chapter-actions";
 import { Locale } from "@/next-i18next.config";
-import { useServerTranslation } from "@/lib/i18n";
+import { ServerTranslation } from "@/lib/i18n";
 import TranslationsProvider from "@/components/providers/translation-provider";
 import { dir } from "i18next";
 import { cn } from "@/lib/utils";
@@ -51,7 +51,7 @@ const ChapterIdPage = async ({
     return redirect("/");
   }
 
-  const { t } = await useServerTranslation(params.lang, charpterNamespaces);
+  const { t } = await ServerTranslation(params.lang, charpterNamespaces);
 
   const requiredFields = [chapter.title, chapter.description, chapter.videoUrl];
 

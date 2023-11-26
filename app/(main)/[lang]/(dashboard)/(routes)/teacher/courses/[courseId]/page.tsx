@@ -19,7 +19,7 @@ import { PriceForm } from "./_components/price-form";
 import { AttachmentForm } from "./_components/attachment-form";
 import { ChaptersForm } from "./_components/chapters-form";
 import { Actions } from "./_components/actions";
-import { useServerTranslation } from "@/lib/i18n";
+import { ServerTranslation } from "@/lib/i18n";
 import { Locale } from "@/next-i18next.config";
 import TranslationsProvider from "@/components/providers/translation-provider";
 import { dir } from "i18next";
@@ -38,7 +38,7 @@ const CourseIdPage = async ({
     return redirect("/");
   }
 
-  const { t } = await useServerTranslation(params.lang, courseNamespaces);
+  const { t } = await ServerTranslation(params.lang, courseNamespaces);
 
   const course = await db.course.findUnique({
     where: {

@@ -45,7 +45,7 @@ export default async function initTranslations(
   return i18nInstance;
 }
 
-export async function useServerTranslation(
+export async function ServerTranslation(
   lng: string,
   ns: string[],
   options = {} as any
