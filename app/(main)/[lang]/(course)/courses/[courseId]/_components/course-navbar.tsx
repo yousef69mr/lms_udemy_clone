@@ -3,6 +3,7 @@ import { Chapter, Course, UserProgress } from "@prisma/client"
 import { NavbarRoutes } from "@/components/navbar-routes";
 
 import { CourseMobileSidebar } from "./course-mobile-sidebar";
+import { Locale } from "@/next-i18next.config";
 
 interface CourseNavbarProps {
   course: Course & {
@@ -11,10 +12,12 @@ interface CourseNavbarProps {
     })[];
   };
   progressCount: number;
+  locale:Locale
 };
 
 export const CourseNavbar = ({
   course,
+  locale,
   progressCount,
 }: CourseNavbarProps) => {
   return (
@@ -22,6 +25,7 @@ export const CourseNavbar = ({
       <CourseMobileSidebar
         course={course}
         progressCount={progressCount}
+        locale={locale}
       />
       <NavbarRoutes />      
     </div>

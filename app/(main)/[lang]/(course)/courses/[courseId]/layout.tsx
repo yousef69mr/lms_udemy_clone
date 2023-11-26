@@ -60,7 +60,7 @@ const CourseLayout = async ({
           dir(params.lang) === "ltr" ? "md:pl-80" : "md:pr-80"
         )}
       >
-        <CourseNavbar course={course} progressCount={progressCount} />
+        <CourseNavbar course={course} progressCount={progressCount} locale={params.lang} />
       </div>
       <div
         className={cn(

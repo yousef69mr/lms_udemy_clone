@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/sheet";
 
 import { CourseSidebar } from "./course-sidebar";
+import { Locale } from "@/next-i18next.config";
 
 interface CourseMobileSidebarProps {
   course: Course & {
@@ -16,11 +17,14 @@ interface CourseMobileSidebarProps {
     })[];
   };
   progressCount: number;
+  locale:Locale
+  
 };
 
 export const CourseMobileSidebar = ({ 
   course,
   progressCount,
+  locale
 }: CourseMobileSidebarProps) => {
   return (
     <Sheet>
@@ -31,6 +35,7 @@ export const CourseMobileSidebar = ({
         <CourseSidebar
           course={course}
           progressCount={progressCount}
+          locale={locale}
         />
       </SheetContent>
     </Sheet>
