@@ -4,8 +4,8 @@ import { Sidebar } from "./_components/sidebar";
 import { Locale } from "@/next-i18next.config";
 import { dir } from "i18next";
 import TranslationsProvider from "@/components/providers/translation-provider";
+import { constantsNamespaces } from "@/lib/namespaces";
 
-export const namespaces = ["constants"];
 
 const DashboardLayout = ({
   children,
@@ -15,7 +15,7 @@ const DashboardLayout = ({
   params: { lang: Locale };
 }) => {
   return (
-    <TranslationsProvider locale={lang} namespaces={namespaces}>
+    <TranslationsProvider locale={lang} namespaces={constantsNamespaces}>
       <div className="h-full">
         <div
           className={cn(

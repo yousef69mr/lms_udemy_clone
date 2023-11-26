@@ -5,7 +5,7 @@ import { ServerTranslation } from "@/lib/i18n";
 import { Locale } from "@/next-i18next.config";
 
 
-// import { mainNamespaces } from "@/app/(main)/layout";
+import { mainNamespaces } from "@/lib/namespaces";
 
 type CourseWithProgressWithCategory = Course & {
   category: Category | null;
@@ -19,7 +19,7 @@ interface CoursesListProps {
 }
 
 export const CoursesList = async ({ items, locale }: CoursesListProps) => {
-  const { t } = await ServerTranslation(locale, ["common"]);
+  const { t } = await ServerTranslation(locale, mainNamespaces);
   return (
     <div>
       <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-4">

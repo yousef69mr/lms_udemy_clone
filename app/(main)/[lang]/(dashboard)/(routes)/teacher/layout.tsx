@@ -1,10 +1,11 @@
 import TranslationsProvider from "@/components/providers/translation-provider";
+import { teacherNamespaces } from "@/lib/namespaces";
 import { isTeacher } from "@/lib/teacher";
 import { Locale } from "@/next-i18next.config";
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
-const teacherNamespaces = ["teacher"];
+
 
 const TeacherLayout = ({
   children,

@@ -9,12 +9,13 @@ import { InfoCard } from "./_components/info-card";
 import TranslationsProvider from "@/components/providers/translation-provider";
 import { Locale } from "@/next-i18next.config";
 import { ServerTranslation } from "@/lib/i18n";
+import { dashboardNamespaces } from "@/lib/namespaces";
 
 interface Props {
   params: { lang: Locale };
 }
 
-const dashboardNamespaces = ["dashboard"];
+
 
 export default async function Dashboard(props: Props) {
   const {

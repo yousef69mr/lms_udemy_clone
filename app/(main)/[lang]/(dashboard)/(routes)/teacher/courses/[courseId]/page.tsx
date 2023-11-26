@@ -24,8 +24,9 @@ import { Locale } from "@/next-i18next.config";
 import TranslationsProvider from "@/components/providers/translation-provider";
 import { dir } from "i18next";
 import { cn } from "@/lib/utils";
+import { courseNamespaces } from "@/lib/namespaces";
 
- const courseNamespaces = ["course"];
+
 
 const CourseIdPage = async ({
   params,

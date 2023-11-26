@@ -8,6 +8,7 @@ import { ConfettiProvider } from "@/components/providers/confetti-provider";
 import i18nConfig, { Locale } from "@/next-i18next.config";
 // import { dir } from "i18next";
 import TranslationsProvider from "@/components/providers/translation-provider";
+import { mainNamespaces } from "@/lib/namespaces";
 
 
 
@@ -20,7 +21,7 @@ export async function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ lang: locale }));
 }
 
-const mainNamespaces = ["common"];
+
 
 export default function MainLayout({
   children,

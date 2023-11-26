@@ -23,8 +23,9 @@ import { ServerTranslation } from "@/lib/i18n";
 import TranslationsProvider from "@/components/providers/translation-provider";
 import { dir } from "i18next";
 import { cn } from "@/lib/utils";
+import { charpterNamespaces } from "@/lib/namespaces";
 
- const charpterNamespaces = ["chapter"];
+ 
 
 const ChapterIdPage = async ({
   params,
